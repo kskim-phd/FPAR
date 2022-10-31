@@ -51,7 +51,7 @@ class IntracranialDataset(Dataset):
                         ])
         self.model_ch = 3 if model_select<2 else 1
         self.mask_trans = transforms.Compose([
-            transforms.Resize((int(img_wsize/32),int(img_wsize/32))),
+            transforms.Resize((int(img_hsize/32),int(img_wsize/32))),
             transforms.ToTensor(), ])
     def __len__(self):
         return len(self.data)
