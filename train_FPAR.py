@@ -40,7 +40,7 @@ gpu = 'T'
 pretrained=True
 lr = 0.1
 class_number = 2
-epoch_lr = [20,40,60,80]
+epoch_lr = [20,40]
 L2_lambda=10
 
 
