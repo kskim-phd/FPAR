@@ -141,7 +141,7 @@ def main():
     elif select_model ==1:
         net = FPAR_ResNet50(n_classes=class_number)
     else:
-        net=FPAR_EfficientNet(n_classes=class_number)
+        net = FPAR_EfficientNet(n_classes=class_number)
 
     if torch.cuda.device_count() > 1:
         net = nn.DataParallel(net).cuda()
