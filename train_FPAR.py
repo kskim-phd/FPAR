@@ -41,7 +41,7 @@ pretrained=True
 lr = 0.1
 class_number = 2
 epoch_lr = [20,40,60,80]
-L2_lamda=10
+L2_lambda=10
 
 
 
@@ -76,7 +76,7 @@ class IntracranialDataset(Dataset):
             mask = self.mask_trans(mask)
         if self.model_ch==3:
             img = torch.cat((img, img, img), axis=0)
-        return {'image': img, 'labels': labels,'masks':mask}
+        return {'image': img, 'labels': labels,'masks':1-mask}
 
 
 def multi_acc(y_pred, y_test):
@@ -98,10 +98,10 @@ def train_phase(net,trnloader,scheduler,optimizer,criterion,valloader):
         for step, batch in enumerate(trnloader):
             inputs = batch["image"].float().cuda()
             labels = batch["labels"].long().cuda()
-            masks = 1-batch["masks"].float().cuda()
+            masks = batch["masks"].float().cuda()
             outputs,at_masks = net(inputs,labels)
 
-            loss = criterion(F.softmax(outputs, dim=1), torch.max(labels, 1)[1])+ (l2loss(at_masks,masks)*L2_lamda)
+            loss = criterion(F.softmax(outputs, dim=1), torch.max(labels, 1)[1])+ (l2loss(at_masks,masks)*L2_lambda)
             acc = multi_acc(F.softmax(outputs, dim=1), torch.max(labels, 1)[1])
             tr_loss += loss.item()
             tr_acc += acc
