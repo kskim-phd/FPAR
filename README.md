@@ -15,7 +15,7 @@ Detailed instructions for testing the image are as follows.
 A PyTorch implementation of FPAR based on original pytorch-gradcam code.
 
 pytorch-gradcam [https://github.com/jacobgil/pytorch-grad-cam] (Thanks for Jacob Gildenblat and contributors.)
-Attention U-Net [] (Thanks for - and contributors.)
+Attention U-Net [] (Thanks for Ozan Oktay and contributors.)
 
 ------
 ## Environments
