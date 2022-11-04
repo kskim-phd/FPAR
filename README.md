@@ -28,10 +28,10 @@ The setting of the virtual environment we used is described as packagelist.txt.
 Please send me a request email (kskim.doc@gmail.com) for that inference sample data (As this work is under review, so it is open to reviewers only).
 
 ------
-## N/A diagnosis (5/2)
+## Train with FPAR
 
-Please downloading the pre-trained weight file [here](https://drive.google.com/file/d/198TmyO5YtXlO-Acn5VE16n_52s5bscSb/view?usp=sharing). 
-Please run "Classification/N_A_inference.py"
+Please downloading the pre-trained weight file [here](). 
+Please run ".py"
 
 ```
 python N_A_inference.py 
