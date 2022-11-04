@@ -27,39 +27,79 @@ The setting of the virtual environment we used is described as packagelist.txt.
 
 Please send me a request email (kskim.doc@gmail.com) for that inference sample data (As this work is under review, so it is open to reviewers only).
 
+Put the data you received into the 'data' folder ('./data/')
+
 ------
-## Train with FPAR
+## Our pretrained weight
 
 Please downloading the pre-trained weight file [here](). 
-Please run ".py"
 
-```
-python N_A_inference.py 
-```
-You will see result of baseline and proposed(N/A)
+Put the weight files you received into the 'checkpoint' folder ('./checkpoint/')
 
-------
 ## Segmentation
 
-Put the test data in the "dataset" folder to create a split mask. please downloading the pre-trained weight file [here](https://drive.google.com/file/d/1Mqs8HA8vjrClaVNMvUbEL__cPPm90scX/view?usp=sharing).  
-Please run "Segmentation/mask_maker.py".
+Please run "segmentation_shoulder.py".
 
 ```
-python mask_maker.py 
+python segmentation_shoulder.py 
 ```
-The segment mask (file name : same name+"mask.jpg") is stored in the same folder.
+
+The segment mask (file name : same name) is stored in the './data/train or test/shoulder_mask/' folder.
+
+------
+
+## Pre-processing
+
+Please run "preprocessing.py".
+
+```
+python preprocessing.py 
+```
+
+All data in the './data/' folder is preprocessed and stored in the './preprocessing_data/' folder.
+
+------
+
+
+## Train FPAR
+
+
+The following code is used to train models with FPAR.
+
+```
+python train_FPAR.py 
+```
+
+Please refer to the code('train_FPAR.py') for detailed arguments.
+
+------
+
+
+## Validation FPAR
+
+
+We provide weights of the learned EfficientNet and ShuffleNetV2 to validate against the test sample.
+
+
+```
+python validation_FPAR.py 
+```
+
+Please refer to the code('validation_FPAR.py') for detailed arguments.
 
 ------
 
 ## GradCAM
 
-Please run "Heatmap.py"
+We provide visualization code based on shuffleNetv2 with the highest performance visually.
+
+Please run "Heatmap.py" and "Overlay_Heatmap_and_image.py"
 
 ```
 python Heatmap.py
 python Overlay_Heatmap_and_image.py
 ```
 
-If you run four things sequentially, you will see that a "Full_CAM" folder is created, storing the Heatmap
+If you run two things sequentially, you will see that a "Full_CAM" folder is created, storing the Heatmap
 
 ------
