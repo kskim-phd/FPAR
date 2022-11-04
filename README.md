@@ -26,14 +26,13 @@ The setting of the virtual environment we used is described as packagelist.txt.
 ------
 ## CXR dataset
 
-Please send me a request email (kskim.doc@gmail.com) for that inference sample data (As this work is under review, so it is open to reviewers only).
+Please send me a request email (kskim.doc@gmail.com) for that inference sample data and pre-trained weight (As this work is under review, so it is open to reviewers only).
 
 Put the data you received into the 'data' folder ('./data/')
 
 ------
 ## Our pretrained weight
 
-Please downloading the pre-trained weight file [here](). 
 
 Put the weight files you received into the 'checkpoint' folder ('./checkpoint/')
 
