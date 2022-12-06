@@ -91,7 +91,7 @@ Please refer to the code('validation_FPAR.py') for detailed arguments.
 
 ## GradCAM
 
-We provide visualization code based on shuffleNetv2 with the highest performance visually.
+We provide visualization code based on ShuffleNetv2 with the highest performance visually.
 
 Please run "Heatmap.py" and "Overlay_Heatmap_and_image.py"
 
