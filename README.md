@@ -4,7 +4,7 @@
 
 We release FPAR evaluation code.
 
-Collaborators: Kyung-su Kim*, Seongje Oh* (Equal contribution)
+Collaborators: Kyungsu Kim*, Seongje Oh* (Equal contribution)
 
 Detailed instructions for testing the image are as follows.
 
