@@ -1,6 +1,6 @@
 # FPAR
 
-# Paper title pseudonymized (Under Review)
+# Paper Title Pseudonymized (Under Review)
 
 We release FPAR evaluation code.
 
