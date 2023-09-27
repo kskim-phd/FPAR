@@ -1,6 +1,6 @@
 # FPAR
 
-# Artificial Intelligence-assisted Analysis to Facilitate Effective Detection of Humeral Lesions in Chest Radiograph
+# Paper title pseudonymized (Under Review)
 
 We release FPAR evaluation code.
 
